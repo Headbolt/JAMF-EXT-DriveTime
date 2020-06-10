@@ -4,11 +4,11 @@
 #
 # ABOUT THIS PROGRAM
 #
-#	ZeroName.sh
-#	https://https://github.com/Headbolt/ZeroName
+#	JAMF-EXT-DriveTime.sh
+#	https://https://https://github.com/Headbolt/JAMF-EXT-DriveTime
 #
 #   This Script is designed for use in JAMF as an Extension Attribute
-#		with a type set of "Integer"
+#		with a type set of "String"
 #
 #   - This script will ...
 #       Search for the current logged in User.
@@ -18,11 +18,9 @@
 #
 # HISTORY
 #
-#   Version: 1.1 - 15/01/2020
+#   Version: 1.0 - 10/06/2020
 #
-#   - 06/01/2018 - V1.0 - Created by Headbolt
-#   - 15/01/2020 - V1.1 - Updated by Headbolt
-#							Split down to get Build Number
+#   - 10/06/2020 - V1.0 - Created by Headbolt
 #
 ###############################################################################################################################################
 #
@@ -34,8 +32,7 @@
 #
 # Grab the current logged in username
 Current_User=$(/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }')
-
-
+#
 ################################################################################################################################################
 #
 # SCRIPT CONTENTS - DO NOT MODIFY BELOW THIS LINE
@@ -94,4 +91,4 @@ CurrentUser
 #
 iCloudDrive
 #
-/bin/echo "<result>$PortalBuildNumber</result>" # Return Result
+/bin/echo "<result>$Result</result>" # Return Result
